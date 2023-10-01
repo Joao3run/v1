@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+  page:
+    build: .
+    container_name: v1-page
+    ports:
+      - "80:80"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.1'
+          memory: '700M'
+
+
+
+
+
+
+

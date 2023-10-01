@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Neue Montreal Mono', monospace;
+    background-color: black;
+    padding: 1rem;
+}
+
+canvas {
+    display: block;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed; /* Not moved by scroll */
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.mask {
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    backdrop-filter: blur(12px);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    font-feature-settings: "palt";
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior: none;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    border: 1px solid white;
+    opacity: .5;
+    padding: 2rem;
+    width: 100vw;
+    z-index: 3;
+}
+
+header {
+    border-bottom: 1px solid white;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.page header h1 {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+    font-size: 30px;
+
+}
+
+.page header p {
+    color: white;
+    padding: 0;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    list-style: none;
+}
+
+ul a {
+    color: white;
+    text-decoration: none;
+}
+
+#_section {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+}
+
+#expertise_section, #experience_section, #contact_section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+#contact_section {
+    flex-direction: column;
+}
+
+#contact_section a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.splash-screen {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+    align-items: center;
+    z-index: 999;
+    animation: splash-screen 3.5s ease-in-out;
+    font-size: 2rem;
+}
+
+
+@keyframes splash-screen {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.card {
+    border: 1px solid white;
+    padding: 1rem;
+    width: 100%;
+}
+
+.full_width {
+    width: 100% !important;
+}
+
+.card_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card_header h5 {
+    margin: 0 2rem;
+}
+
+#experience_section svg {
+    width: 1rem;
+}
+
+.tech_pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+.tech_pills div {
+    border: 1px solid white;
+    padding: 0.5rem;
+}
+
+canvas {
+    display: block;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.card p {
+    margin: 0.5rem 0;
+}
+
+.card a {
+    color: white;
+}
+
+
+@media only screen and (min-width: 600px) {
+
+
+}
+
+@media only screen and (min-width: 768px) {
+    .card {
+        width: calc(50% - 4rem);
+    }
+
+    .page {
+        height: 100%;
+        min-height: calc(100vh - 6.2rem);
+
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    .card {
+        width: calc(33% - 4rem);
+    }
+
+    #contact_section {
+        min-width: 1414px;
+    }
+
+}
+
+@media only screen and (min-width: 1800px) {
+
+}
